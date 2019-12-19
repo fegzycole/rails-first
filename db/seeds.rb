@@ -7,7 +7,7 @@ skills = %w[Ruby Django NodeJS MongoDB Postgresql]
 10.times do |blog|
   Blog.create!(
     title: "My blogpost #{blog}",
-    body: Faker::Lorem.paragraph
+    body: Faker::Lorem.paragraph(sentence_count: 20)
   )
 end
 
@@ -26,7 +26,7 @@ puts 'five skills created'
   Portfolio.create!(
     title: "Portfolio title #{portfolio}",
     subtitle: 'My great service',
-    body: Faker::Lorem.paragraph,
+    body: Faker::Lorem.paragraph(sentence_count: 20),
     main_image: 'https://via.placeholder.com/600x400',
     thumb_image: 'https://via.placeholder.com/350x200'
   )
