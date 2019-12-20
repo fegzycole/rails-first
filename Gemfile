@@ -8,6 +8,7 @@ gem 'rails', '~> 6.0.2'
 
 gem 'faker'
 
+gem 'friendly_id'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server

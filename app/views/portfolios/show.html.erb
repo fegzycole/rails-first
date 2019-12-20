@@ -5,3 +5,7 @@
 <h3><%= @portfolio.subtitle %><h3>
 
 <p><%= @portfolio.body %><p>
+
+<%= link_to "Edit", edit_portfolio_url(@portfolio.id) %>
+
+<%= link_to "Back", portfolios_url(@portfolio.id) %>
