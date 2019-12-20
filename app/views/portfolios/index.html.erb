@@ -2,10 +2,10 @@
 
 <%=link_to "New Item", new_portfolio_url %>
 <% @portfolio_items.each do |item| %>
-  <p><%= item.title %></p>
-  <p><%= item.subtitle %></p>
+  <p><%= link_to item.title, portfolio_url(item) %></p>
+  <em><%= item.subtitle %></em>
   <p><%= item.body %></p>
   <%= image_tag item.thumb_image if item.thumb_image %>
-  <%= link_to "Edit", edit_portfolio_url(item.id) %>
-  <%= link_to "View", portfolio_url(item.id) %>
+  <%= link_to "Edit", edit_portfolio_url(item) %>
+  <%= link_to "Delete", portfolio_url(item), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
